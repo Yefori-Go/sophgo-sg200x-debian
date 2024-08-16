@@ -151,8 +151,8 @@ opensbi-clean:
 $(BUILDDIR)/fsbl-prepare-checkout-stamp:
 	@echo "$(COLOUR_GREEN)Checking out FSBL for $(BOARD)$(END_COLOUR)"
 	@mkdir -p $(BUILDDIR)
-	@git clone -b milkv --depth 1 https://github.com/milkv-duo/fsbl.git $(BUILDDIR)/fsbl
-	@cd $(BUILDDIR)/fsbl && git checkout beb1483
+	@git clone --depth 1 https://github.com/Yefori-Go/fsbl.git $(BUILDDIR)/fsbl
+	@cd $(BUILDDIR)/fsbl
 	@touch $@
 
 $(BUILDDIR)/fsbl-prepare-patch-stamp: $(BUILDDIR)/fsbl-prepare-checkout-stamp
