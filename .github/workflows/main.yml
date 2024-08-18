@@ -65,7 +65,7 @@ jobs:
           image: ghcr.io/yefori-go/sophgo-sg200x-debian:master
           options: --privileged -v ${{ github.workspace }}/images/:/output -v ${{ github.workspace }}/configs/:/configs/
           run: |
-            make BOARD=${{ matrix.boards }} STORAGE_TYPE=${{ matrix.storage }} image
+            make BOARD=${{ matrix.boards }} STORAGE_TYPE=${{ matrix.storage }} linux
             chmod 777 /output/
       - name: Pack
         run: |
